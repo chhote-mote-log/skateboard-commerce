@@ -1,0 +1,78 @@
+{
+  "id": "hero",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "Hero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "preformatted,heading1,heading2,heading3,heading4,heading5,heading6,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "button": {
+          "type": "Link",
+          "config": {
+            "label": "Button",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "skateboard_deck_texture": {
+          "type": "Image",
+          "config": {
+            "label": "Skateboard Deck Texture",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "skateboard_wheel_texture": {
+          "type": "Image",
+          "config": {
+            "label": "Skateboard wheel Texture",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "skateboard_bolt_color": {
+          "type": "Color",
+          "config": {
+            "label": "Skateboard Bolt color",
+            "placeholder": ""
+          }
+        },
+        "skateboard_truck_color": {
+          "type": "Color",
+          "config": {
+            "label": "Skateboard Truck color",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
