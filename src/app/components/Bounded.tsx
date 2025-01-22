@@ -1,27 +1,21 @@
-import { CSSProperties, ElementType, ReactNode } from "react";
-import clsx from "clsx";
+import { CSSProperties, ReactNode, ElementType} from "react";
 
-type BoundedProps = {
-  as?: ElementType;
-  className?: never;
+type BoundedProps<T extends ElementType> = {
+  as?: T;
+  className?: string;
   style?: CSSProperties;
-  children: ReactNode;
+  children: ReactNode; // This ensures any valid children can be passed
 };
 
-export function Bounded({
-  as: Comp = "section",
+export function Bounded<T extends ElementType>({
+  as: Comp = "section" as T,
   className,
   children,
+  style,
   ...restProps
-}: BoundedProps) {
+}: BoundedProps<T>) {
   return (
-    <Comp
-      className={clsx(
-        "px-6 ~py-10/16 [.header+&]:pt-44 [.header+&]:md:pt-32",
-        className,
-      )}
-      {...restProps}
-    >
+    <Comp className={className} style={style} {...restProps}>
       <div className="mx-auto w-full max-w-6xl">{children}</div>
     </Comp>
   );
