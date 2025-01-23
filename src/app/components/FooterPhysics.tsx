@@ -102,7 +102,13 @@ export function FooterPhysics({
     // Add mouse interaction for dragging boards
     const mouse = Mouse.create(render.canvas);
     
-    mouse.element.removeEventListener("wheel", mouse.mousewheel);
+    mouse.element.addEventListener(
+      "wheel",
+      (event) => {
+        event.preventDefault();
+      },
+      { passive: false } // Ensure preventDefault works
+    );
 
     const mouseConstraint = MouseConstraint.create(engine.current, {
       mouse,
