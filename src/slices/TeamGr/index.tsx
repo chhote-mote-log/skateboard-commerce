@@ -15,7 +15,7 @@ export type TeamGrProps = SliceComponentProps<Content.TeamGrSlice>;
 /**
  * Component for "TeamGr" Slices.
  */
-const TeamGr = async ({ slice }: TeamGrProps): Promise<JSX.Element> => {
+const TeamGr = async ({ slice }: TeamGrProps)=> {
   const client = createClient();
   const skaters = await client.getAllByType("skater");
   return (

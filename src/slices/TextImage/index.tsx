@@ -22,7 +22,7 @@ export type TextImageProps = SliceComponentProps<Content.TextImageSlice>;
 /**
  * Component for "TextImage" Slices.
  */
-const TextImage = ({ slice,index }: TextImageProps): JSX.Element => {
+const TextImage = ({ slice,index }: TextImageProps)=> {
   return (
     <Bounded
       data-slice-type={slice.slice_type}

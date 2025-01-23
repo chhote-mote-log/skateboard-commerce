@@ -20,7 +20,7 @@ const Defalut_Wheel_texture = "/skateboard/SkateWheel1.png";
 const Defalut_Truck_color = "#6F6E6A";
 const Defalut_Bolt_color = "#6F6E6A";
 
-const Hero = ({ slice }: HeroProps): JSX.Element => {
+const Hero = ({ slice }: HeroProps)=> {
   const deckTextureURL =
     asImageSrc(slice.primary.skateboard_deck_texture) || Defalut_Deck_texture;
   const wheelTextureURL =

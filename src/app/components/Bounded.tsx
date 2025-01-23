@@ -8,15 +8,15 @@ type BoundedProps<T extends ElementType> = {
 };
 
 export function Bounded<T extends ElementType>({
-  as: Comp = "section" as T,
+  as:T,
   className,
   children,
   style,
   ...restProps
 }: BoundedProps<T>) {
   return (
-    <Comp className={className} style={style} {...restProps}>
+    <div className={className} style={style} {...restProps}>
       <div className="mx-auto w-full max-w-6xl">{children}</div>
-    </Comp>
+    </div>
   );
 }
